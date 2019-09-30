@@ -10,10 +10,12 @@ using namespace std;
 
 
 int main() {
-	vector<int>jusuio{ 1,2,3,4,5,7,6,3 };
+	vector<float>jusuio{ 0,2.553,543,1.3,6.4,33,3};
 	int maximiliano[8] = { 1,2,1,24,2,5,6,9 };
 	string aurelio = "wackass";
-	BuildMaxHeap(aurelio);
-	test(aurelio);
+	HeapSort(jusuio);
+	HeapSort(maximiliano);
+	test(jusuio);
+	test(maximiliano);
 
 };
