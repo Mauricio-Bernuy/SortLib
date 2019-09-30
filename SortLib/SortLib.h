@@ -24,21 +24,21 @@ void heapify(T &A, int floor, int n) {
 
 	if (left <= n && A[left] > A[floor]) {
 		max = left;
-		std::cout << "max left = " << A[max] << std::endl;
+		//std::cout << "max left = " << A[max] << std::endl;
 	}
 	else {
 		max = floor;
-		std::cout << "max floor= " << A[max] << std::endl;
+		//std::cout << "max floor= " << A[max] << std::endl;
 	}
 
 	if (right <= n && A[right] > A[max]) {
 		max = right;
-		std::cout << "max right= " << A[max] << std::endl;
+		//std::cout << "max right= " << A[max] << std::endl;
 	}
 	if (max != floor) {
-		std::cout << "max aint equal to floor"<< std::endl;
+		//std::cout << "max aint equal to floor"<< std::endl;
 		swap(A[floor], A[max]);
-		test(A);
+		//test(A);
 		heapify(A, max, n);
 	}
 };
@@ -46,7 +46,7 @@ void heapify(T &A, int floor, int n) {
 template<typename T>
 void BuildMaxHeap(T &Container, int n) {
 	for (int floor = (((n+1)/2)-1); floor !=-1; floor--) {
-		std::cout << "called BuildMaxHeap"<<std::endl;
+		//std::cout << "called BuildMaxHeap"<<std::endl;
 		heapify(Container, floor, n);
 	}
 }
@@ -57,18 +57,18 @@ void HeapSort(T &Container) {
 	BuildMaxHeap(Container, n);
 
 	for (int i = n; n > 0;) {
-		cout << "in for" << endl;
+		//cout << "in for" << endl;
 		swap(Container[0], Container[n]);
-		cout << "swapped" << endl;
-		test(Container);
+		//cout << "swapped" << endl;
+		//test(Container);
 		n--;
-		cout << n << endl;
+		//cout << n << endl;
 		if (((n +1 / 2) - 1) > -1){
 			heapify(Container, 0, n);
 
 		}
 		else {
-			cout << "sorted"<<endl;
+			//cout << "sorted"<<endl;
 		}
 		
 		
